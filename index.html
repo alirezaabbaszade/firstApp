@@ -57,11 +57,11 @@
         const ageEl = document.createElement('div');
         ageEl.innerText = `age ${age}`;
 
-        cart.appendChild(name);
-        cart.appendChild(age);
-        container.appendChild(cart)
+        cart.appendChild(nameEl);
+        cart.appendChild(ageEl);
+        return cart
     }
-
+    container.appendChild(generateCard('alireza', 30));
     document.body.appendChild(container)
 </script>
 </body>
