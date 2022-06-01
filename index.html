@@ -27,42 +27,7 @@
     </style>
 </head>
 <body>
-<!--<div class="container">-->
-<!--    <div class="cart">-->
-<!--        <span>name: poriya</span>-->
-<!--        <span>age: 30</span>-->
-<!--    </div>-->
-<!--    <div class="cart">-->
-<!--        <span>name: milad</span>-->
-<!--        <span>age: 24</span>-->
-<!--    </div>-->
-<!--    <div class="cart">-->
-<!--        <span>name: amir</span>-->
-<!--        <span>age: 20</span>-->
-<!--    </div>-->
-<!--</div>-->
-<script>
 
-    const container = document.createElement('div');
-    container.classList.add('container');
-
-    function generateCard(name , age) {
-
-        const cart = document.createElement('div');
-        cart.classList.add('cart')
-
-        const nameEl = document.createElement('span');
-        nameEl.innerText =`name: ${name}`;
-
-        const ageEl = document.createElement('div');
-        ageEl.innerText = `age ${age}`;
-
-        cart.appendChild(nameEl);
-        cart.appendChild(ageEl);
-        return cart
-    }
-    container.appendChild(generateCard('alireza', 30));
-    document.body.appendChild(container)
-</script>
+<script src="index.js"></script>
 </body>
 </html>
