@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        body {
-            background-color: #007bec;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        .cart {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            background-color: aliceblue;
-            margin: 10px;
-            padding: 15px;
-        }
-
-        span {
-            display: block;
-        }
-    </style>
 </head>
 <body>
+<div id="root"></div>>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
 
-<script src="index.js" type="module"></script>
+    function genrateCart(name, age) {
+        return React.createElement(
+            'div', {
+                class: 'cart'
+            },
+            React.createElement('span', null, `name: ${name}`),
+            React.createElement('span', null, `age: ${age}`))
+
+
+    }
+
+    const userData = [{
+        name: 'poriya',
+        age: 30
+    },
+        {
+            name: 'milad',
+            age: 24
+        },
+        {
+            name: 'amir',
+            age: 20
+        },
+    ]
+
+   const carts =  userData.map(data => {
+     return genrateCart(data.name, data.age);
+    })
+
+    const container = React.createElement(
+        'div', {
+        class: 'container'
+    }, carts);
+
+    ReactDOM.render(container, document.getElementById('root'))
+</script>
 </body>
 </html>
